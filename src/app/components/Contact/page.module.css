@@ -40,18 +40,18 @@
   }
   
   .Form {
-    width: 500px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 25px;
   }
   
-  @media only screen and (max-width: 768px) {
+  /* @media only screen and (max-width: 768px) {
     .Form {
-      width: 300px;
+      width: 100%;
     }
   }
-  
+   */
   .Input {
     outline: none;
     border: none;
