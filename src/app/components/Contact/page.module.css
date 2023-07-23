@@ -1,0 +1,115 @@
+.Section {
+    height: 100vh;
+    scroll-snap-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .Container {
+    width: 87.5vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    @media only screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+   }
+  }
+  
+  .Left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @media only screen and (max-width: 768px) {
+      justify-content: center;
+    }
+  }
+  
+  
+  .Title {
+    color: white;
+    font-weight: 200;
+  }
+
+  .desc{
+    font-size: 15px;
+    font-weight: 300;
+    text-align: justify;
+  }
+  
+  .Form {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .Form {
+      width: 300px;
+    }
+  }
+  
+  .Input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #00A97F;
+    padding: 10px;
+    color: white;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    transition: border-color 0.5s ease-out;
+  }
+  
+  .Input:focus {
+    border-bottom-color: white;
+  }
+  
+  .TextArea {
+    outline: none;
+    border: 1px solid #00A97F;
+    padding: 10px;
+    color: white;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    transition: border-color 0.5s ease-out;
+  }
+  
+  .TextArea:focus {
+    border-color: white;
+  }
+  
+  .Right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .RightItems{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+
+  
+  .ButtonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Message {
+    color: white;
+    text-align: center;
+  }
+  
