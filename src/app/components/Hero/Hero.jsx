@@ -23,8 +23,8 @@ export default function Hero({ id }) {
           </div>
         </div>
         <div className={styles.Right}>
-            <img className={styles.Img} src="/pexels-miguel-á-padriñán-1591060-removebg-preview-removebg.png" alt="" />
-          </div>
+          <img className={styles.Img} src="/pexels-miguel-á-padriñán-1591060-removebg-preview-removebg.png" alt="" />
+        </div>
       </div>
     </div>
   );
