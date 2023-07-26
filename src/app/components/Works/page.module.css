@@ -1,83 +1,81 @@
 .Section {
-    height: 100vh;
-    scroll-snap-align: center;
-    display: flex;
-    justify-content: center;
-  }
-  
+  height: 100vh;
+  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.Container {
+  height: 100%;
+  width: 87.5vw;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
   .Container {
-    height: 100%;
-    width: 87.5vw;
-    display: flex;
-    justify-content: center;
-  }
-  
-  @media only screen and (max-width: 768px) {
-    .Container {
-      width: 100%;
-      flex-direction: column;
-    }
-  }
-  
-  .Left {
-    flex: 1;
-    display: flex;
-    align-items: center;
-  }
-  
-  @media only screen and (max-width: 768px) {
-    .Left {
-      justify-content: center;
-    }
-  }
-  
-  .Right {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @media only screen and (max-width: 768px) {
-      width: 100%;
-    }
-  }
-  
-  .List {
-    list-style: none;
-    display: flex;
+    width: 100%;
     flex-direction: column;
-    gap: 20px;
   }
-  
-  .ListItem {
-    width: max-content;
-    font-size: 50px;
-    font-weight: bold;
-    cursor: pointer;
-    color: white;
-    position: relative;
-  }
+}
 
-  .ListItem::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0; 
-    height: 2px; 
-    background-color: white; 
-    transition: width 0.3s ease; 
-  }
+.Left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
 
-  .ListItem:hover::after {
-    width: 100%; 
+@media only screen and (max-width: 768px) {
+  .Left {
+    justify-content: center;
   }
-  
+}
+
+.Right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @media only screen and (max-width: 768px) {
-    .ListItem {
-      font-size: 24px;
-      color: white;
-      -webkit-text-stroke: 0;
-    }
+    width: 100%;
   }
-  
-  
+}
+
+.List {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ListItem {
+  width: max-content;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  position: relative;
+}
+
+.ListItem::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.ListItem:hover::after {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .ListItem {
+    font-size: 24px;
+    color: white;
+    -webkit-text-stroke: 0;
+  }
+}

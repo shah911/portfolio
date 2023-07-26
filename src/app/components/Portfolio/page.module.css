@@ -1,58 +1,52 @@
-.Container{
-    height: 400px;
-    width: 450px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    color: white;
-    @media only screen and (max-width: 768px) {
-      height: 200px;
-      width: 250px;
-    }
+.Container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: white;
 }
 
-.WrapperContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
+.WrapperContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.Wrapper{
-    display: flex;
-    gap: 25px;
+.Wrapper {
+  display: flex;
+  gap: 25px;
 }
 
-.img{
-    height: 100px;
-    width: 140px;
-    border-radius: 15px;
+.img {
+  height: 100px;
+  width: 140px;
+  border-radius: 15px;
 }
 
-.ImgContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.ImgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.desc{
-    text-align: justify;
-    font-size: 14px;
+.desc {
+  text-align: justify;
+  font-size: 14px;
 }
 
-.projectTitle{
-    font-size: 32px;
-    font-weight: 300;
+.projectTitle {
+  font-size: 32px;
+  font-weight: 300;
 }
 
-.projectTitle{
-    font-size: 32px;
-    font-weight: 300;
-    @media only screen and (max-width:768px){
-        font-size: 24px;
-    }
+.projectTitle {
+  font-size: 32px;
+  font-weight: 300;
+  @media only screen and (max-width: 768px) {
+    font-size: 24px;
+  }
 }
