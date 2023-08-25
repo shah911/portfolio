@@ -1,18 +1,18 @@
-import React, { useRef, useEffect } from 'react';
-import Typed from 'typed.js';
+import React, { useRef, useEffect } from "react";
+import Typed from "typed.js";
 
 const AutoTyping = () => {
   const typedRef = useRef(null);
 
   useEffect(() => {
     const options = {
-      strings: ['Full-Stack', 'MERN-Stack'],
+      strings: ["Front-End", "Back-End", "Full-Stack"],
       typeSpeed: 50,
       backSpeed: 50,
       loop: true,
     };
 
-    typedRef.current = new Typed('.typed-element', options);
+    typedRef.current = new Typed(".typed-element", options);
 
     return () => {
       typedRef.current.destroy();
