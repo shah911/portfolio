@@ -27,10 +27,10 @@ const FrontEnd = [
 
 const BackEnd = [
   {
-    url: "/node-removebg (1).png",
+    url: "/node-removebg.png",
   },
   {
-    url: "/prisma dark.png",
+    url: "/prisma.png",
   },
   {
     url: "/docker-removebg.png",
