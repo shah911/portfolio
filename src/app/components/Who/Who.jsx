@@ -1,6 +1,47 @@
+import Image from "next/image";
 import CustomButton from "../Custombutton/CustomButton";
 import styles from "./page.module.css";
 import React from "react";
+import { motion } from "framer-motion";
+
+const FrontEnd = [
+  {
+    url: "/HTML.png",
+  },
+  {
+    url: "/pluginIcon-removebg-preview.png",
+  },
+  {
+    url: "/JavaScript.png",
+  },
+  {
+    url: "/typescript.png",
+  },
+  {
+    url: "/React.png",
+  },
+  {
+    url: "/nextjs.png",
+  },
+];
+
+const BackEnd = [
+  {
+    url: "/node-removebg (1).png",
+  },
+  {
+    url: "/prisma dark.png",
+  },
+  {
+    url: "/docker-removebg.png",
+  },
+  {
+    url: "/sql-removebg.png",
+  },
+  {
+    url: "/MongoDB-removebg.png",
+  },
+];
 
 export default function Who({ id }) {
   const scrollToSection = (id) => {
@@ -13,24 +54,51 @@ export default function Who({ id }) {
   return (
     <div className={styles.Section} id={id}>
       <div className={styles.Container}>
-        <div className={styles.Left}>
-          <ul className={styles.List}>
-            <li className={styles.ListItemTitle}>FRONTEND</li>
-            <li className={styles.ListItem}>HTML</li>
-            <li className={styles.ListItem}>CSS</li>
-            <li className={styles.ListItem}>Js</li>
-            <li className={styles.ListItem}>Ts</li>
-            <li className={styles.ListItem}>ReactJs</li>
-            <li className={styles.ListItem}>NextJs</li>
-            <li className={styles.ListItemTitle}>BACKEND</li>
-            <li className={styles.ListItem}>nodeJs</li>
-            <li className={styles.ListItem}>NextJs</li>
-            <li className={styles.ListItem}>Prisma</li>
-            <li className={styles.ListItem}>Docker</li>
-            <li className={styles.ListItem}>SQL Databases</li>
-            <li className={styles.ListItem}>NOSQL Databases</li>
-          </ul>
-        </div>
+        <motion.div className={styles.Left}>
+          <span className={styles.ListItemTitle}>FRONTEND</span>
+          <div className={styles.skills}>
+            {FrontEnd.map((item) => (
+              <motion.div
+                className={styles.skills}
+                key={item.url}
+                whileHover={{
+                  scale: 1.2,
+                  transition: { type: "spring", stiffness: 300 },
+                }}
+              >
+                <Image
+                  src={item.url}
+                  alt=""
+                  width={35}
+                  height={35}
+                  className={styles.img}
+                />
+              </motion.div>
+            ))}
+          </div>
+
+          <span className={styles.ListItemTitle}>BACKEND</span>
+          <div className={styles.skills}>
+            {BackEnd.map((item) => (
+              <motion.div
+                className={styles.skills}
+                key={item.url}
+                whileHover={{
+                  scale: 1.2,
+                  transition: { type: "spring", stiffness: 300 },
+                }}
+              >
+                <Image
+                  src={item.url}
+                  alt=""
+                  width={35}
+                  height={35}
+                  className={styles.img}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
         <div className={styles.Right}>
           <h1 className={styles.Title}>My Skillset</h1>
           <p className={styles.Desc}>

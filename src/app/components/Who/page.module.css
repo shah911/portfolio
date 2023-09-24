@@ -1,77 +1,83 @@
 .Section {
-    height: 100vh;
-    scroll-snap-align: center;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .Container {
-    height: 100%;
-    scroll-snap-align: center;
-    color: white;
-    width: 87.5vw;
-    display: flex;
-    z-index: 1;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    @media only screen and (max-width: 768px) {
-        width: 100%;
-      }
-  }
+  height: 100vh;
+  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
+}
 
-  
-  
-  .Left {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @media only screen and (max-width: 768px) {
+.Container {
+  height: 100%;
+  scroll-snap-align: center;
+  color: white;
+  width: 87.5vw;
+  display: flex;
+  z-index: 1;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.Left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  @media only screen and (max-width: 768px) {
     display: none;
-    }
   }
+}
 
-  .List{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
+.List {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
 
-  .ListItem{
-    font-size: 18px;
-    font-weight: 300;
-  }
+.ListItem {
+  font-size: 18px;
+  font-weight: 300;
+}
 
-  .ListItemTitle{
-    font-weight: bold;
-    font-size: 32px;
-  }
-  
-  .Right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    @media only screen and (max-width: 768px) {
-      align-items: center;
-      text-align: center;
-    }
-  }
-  
-  .Title {
-    font-size: 74px;
-    @media only screen and (max-width: 768px) {
-      font-size: 50px;
-    }
-  }
-  
-  .Desc {
-    font-size: 24px;
-    @media only screen and (max-width: 768px) {
-      font-size: 20px;
-    }
-  }
+.ListItemTitle {
+  font-weight: bold;
+  font-size: 32px;
+}
 
-  
+.Right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  @media only screen and (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.Title {
+  font-size: 74px;
+  @media only screen and (max-width: 768px) {
+    font-size: 50px;
+  }
+}
+
+.Desc {
+  font-size: 24px;
+  @media only screen and (max-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+.img {
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.skills {
+  display: flex;
+  gap: 25px;
+}

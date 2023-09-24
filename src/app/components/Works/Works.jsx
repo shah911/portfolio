@@ -2,10 +2,17 @@ import Admin from "../Admin/Admin";
 import Js from "../Js/Js";
 import Portfolio from "../Portfolio/Portfolio";
 import Site from "../Site/Site";
+import Blog from "../Blog/Blog";
 import styles from "./page.module.css";
 import React, { useState } from "react";
 
-const data = ["E-commerce site", "Admin panel", "3D-portfolio", "Js"];
+const data = [
+  "E-commerce site",
+  "Admin panel",
+  "3D-portfolio",
+  "Blog site",
+  "Js",
+];
 
 export default function Works({ id }) {
   const [work, setWork] = useState("E-commerce site");
@@ -32,6 +39,8 @@ export default function Works({ id }) {
             <Site />
           ) : work === "Admin panel" ? (
             <Admin />
+          ) : work === "Blog site" ? (
+            <Blog />
           ) : (
             <Portfolio />
           )}

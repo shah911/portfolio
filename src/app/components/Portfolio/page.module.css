@@ -22,10 +22,18 @@
 }
 
 .img {
-  height: 100px;
-  width: 140px;
+  width: 280px;
   border-radius: 15px;
+  object-fit: contain;
+  @media only screen and (max-width: 768px) {
+    width: 180px;
+  }
 }
+
+/* .img:hover {
+  transition: all ease 0.25s;
+  scale: 1.1;
+} */
 
 .ImgContainer {
   display: flex;
@@ -36,6 +44,9 @@
 .desc {
   text-align: justify;
   font-size: 14px;
+  @media only screen and (max-width: 768px) {
+    font-size: 10px;
+  }
 }
 
 .projectTitle {

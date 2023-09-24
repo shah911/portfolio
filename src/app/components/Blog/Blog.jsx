@@ -1,14 +1,14 @@
 import React from "react";
 import styles from "./page.module.css";
-import { motion } from "framer-motion";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
-export default function Site() {
+export default function Admin() {
   return (
     <div className={styles.Container}>
       <Link
         style={{ color: "inherit", textDecoration: "none" }}
-        href="https://phenomenal-cuchufli-dadc2d.netlify.app/"
+        href="https://blog-git-main-shah911.vercel.app/"
       >
         <div className={styles.Wrapper}>
           <motion.div
@@ -18,17 +18,14 @@ export default function Site() {
               transition: { type: "spring", stiffness: 300 },
             }}
           >
-            <img className={styles.img} src="/site.PNG" alt="" />
+            <img className={styles.img} src="/Blog.PNG" alt="" />
           </motion.div>
           <div className={styles.details}>
             <h3 className={styles.projectTitle}>SHAH.</h3>
             <p className={styles.desc}>
-              This is a demo store. You can use <strong>admin</strong> as the
-              username and <strong>12345</strong> as the login credentials to
-              access and proceed with the checkout process. For payments, you
-              may use the default credit card number{" "}
-              <strong>4242 4242 4242</strong>, any 4-digit number for the expiry
-              date, and any 3-digit number for the CVC.
+              This platform functions as a demonstrative blog site. Please note
+              that you need a <strong>Google account</strong> for authentication
+              in order to publish a blog post.
             </p>
           </div>
         </div>

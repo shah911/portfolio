@@ -29,7 +29,13 @@
   height: 100px;
   width: 140px;
   border-radius: 15px;
+  object-fit: cover;
 }
+
+/* .img:hover {
+  transition: all ease 0.25s;
+  scale: 1.1;
+} */
 
 .projectTitle {
   font-size: 24px;

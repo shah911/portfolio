@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./page.module.css";
-import CustomButton from "../Custombutton/CustomButton";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Admin() {
   return (
@@ -11,9 +11,15 @@ export default function Admin() {
         href="https://bespoke-malabi-efb7d9.netlify.app/login"
       >
         <div className={styles.Wrapper}>
-          <div className={styles.ImgContainer}>
-            <img className={styles.img} src="/admin-panel.PNG" alt="" />
-          </div>
+          <motion.div
+            className={styles.ImgContainer}
+            whileHover={{
+              scale: 1.1,
+              transition: { type: "spring", stiffness: 300 },
+            }}
+          >
+            <img className={styles.img} src="/admin-panel.PNG" alt="" fill />
+          </motion.div>
           <div className={styles.details}>
             <h3 className={styles.projectTitle}>SHAH.</h3>
             <p className={styles.desc}>
