@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./page.module.css";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Js() {
   return (
@@ -19,7 +20,13 @@ export default function Js() {
                 transition: { type: "spring", stiffness: 300 },
               }}
             >
-              <img className={styles.img} src="/drumkit.PNG" alt="" />
+              <Image
+                className={styles.img}
+                src="/drumkit.PNG"
+                alt=""
+                height={100}
+                width={140}
+              />
             </motion.div>
             <div className={styles.details}>
               <h3 className={styles.projectTitle}>Drum kit</h3>
@@ -39,7 +46,13 @@ export default function Js() {
                 transition: { type: "spring", stiffness: 300 },
               }}
             >
-              <img className={styles.img} src="/simon-game.PNG" alt="" />
+              <Image
+                className={styles.img}
+                src="/simon-game.PNG"
+                alt=""
+                height={100}
+                width={140}
+              />
             </motion.div>
             <div className={styles.details}>
               <h3 className={styles.projectTitle}>Simon game</h3>

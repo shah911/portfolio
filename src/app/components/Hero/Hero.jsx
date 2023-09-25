@@ -5,6 +5,7 @@ import NavBar from "../Navber/NavBar";
 import Link from "next/link";
 import AutoTyping from "../Autotype/Autotyping";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Hero({ id }) {
   return (
@@ -30,10 +31,13 @@ export default function Hero({ id }) {
           </div>
         </div>
         <div className={styles.Right}>
-          <img
+          <Image
             className={styles.Img}
             src="/pexels-miguel-á-padriñán-1591060-removebg-preview-removebg.png"
             alt=""
+            fill
+            priority
+            sizes="(max-width: 768px) 100%"
           />
         </div>
       </motion.div>

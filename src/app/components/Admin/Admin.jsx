@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Admin() {
   return (
@@ -18,10 +19,15 @@ export default function Admin() {
               transition: { type: "spring", stiffness: 300 },
             }}
           >
-            <img className={styles.img} src="/admin-panel.PNG" alt="" fill />
+            <Image
+              className={styles.img}
+              src="/admin-panel.PNG"
+              alt=""
+              width={280}
+              height={140}
+            />
           </motion.div>
           <div className={styles.details}>
-            <h3 className={styles.projectTitle}>SHAH.</h3>
             <p className={styles.desc}>
               This platform serves as a demonstrational admin panel. To access
               the admin-panel, please utilize the following login credentials:

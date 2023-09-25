@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./page.module.css";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Portfolio() {
   return (
@@ -18,10 +19,15 @@ export default function Portfolio() {
               transition: { type: "spring", stiffness: 300 },
             }}
           >
-            <img className={styles.img} src="/Port.PNG" alt="" />
+            <Image
+              className={styles.img}
+              src="/Port.PNG"
+              alt=""
+              width={280}
+              height={140}
+            />
           </motion.div>
           <div className={styles.details}>
-            <h3 className={styles.projectTitle}>SHAHDev</h3>
             <p className={styles.desc}>
               This platform functions as a professional portfolio site,
               exclusively featuring <strong>3D models</strong>.

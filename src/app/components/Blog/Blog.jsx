@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Admin() {
   return (
@@ -18,10 +19,15 @@ export default function Admin() {
               transition: { type: "spring", stiffness: 300 },
             }}
           >
-            <img className={styles.img} src="/Blog.PNG" alt="" />
+            <Image
+              className={styles.img}
+              src="/Blog.PNG"
+              alt=""
+              width={280}
+              height={140}
+            />
           </motion.div>
           <div className={styles.details}>
-            <h3 className={styles.projectTitle}>SHAH.</h3>
             <p className={styles.desc}>
               This platform functions as a demonstrative blog site. Please note
               that you need a <strong>Google account</strong> for authentication

@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./page.module.css";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Site() {
   return (
@@ -18,10 +19,15 @@ export default function Site() {
               transition: { type: "spring", stiffness: 300 },
             }}
           >
-            <img className={styles.img} src="/site.PNG" alt="" />
+            <Image
+              className={styles.img}
+              src="/site.PNG"
+              alt=""
+              width={280}
+              height={140}
+            />
           </motion.div>
           <div className={styles.details}>
-            <h3 className={styles.projectTitle}>SHAH.</h3>
             <p className={styles.desc}>
               This is a demo store. You can use <strong>admin</strong> as the
               username and <strong>12345</strong> as the login credentials to
