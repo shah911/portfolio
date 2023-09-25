@@ -68,8 +68,8 @@ export default function Who({ id }) {
                 <Image
                   src={item.url}
                   alt=""
-                  width={35}
-                  height={35}
+                  width={40}
+                  height={40}
                   className={styles.img}
                 />
               </motion.div>
@@ -90,8 +90,8 @@ export default function Who({ id }) {
                 <Image
                   src={item.url}
                   alt=""
-                  width={35}
-                  height={35}
+                  width={40}
+                  height={40}
                   className={styles.img}
                 />
               </motion.div>
