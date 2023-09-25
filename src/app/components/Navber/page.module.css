@@ -1,76 +1,74 @@
 .Section {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    z-index: 999;
-  
-    @media only screen and (max-width: 768px) {
-      width: 100%;
-      position: relative;
-    }
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    position: relative;
   }
-  
-  .Container {
-    width: 87.5vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0px;
-  
-    @media only screen and (max-width: 768px) {
-      width: 100%;
-      padding: 0 15px;
-    }
+}
+
+.Container {
+  width: 87.5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  color: white;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    padding: 0 15px;
   }
-  
-  .Links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+.Links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.List {
+  display: flex;
+  gap: 60px;
+  list-style: none;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
   }
-  
-  .List {
-    display: flex;
-    gap: 60px;
-    list-style: none;
-  
-    @media only screen and (max-width: 768px) {
-      display: none;
-    }
+}
+
+.ListItem {
+  cursor: pointer;
+  z-index: 1;
+}
+
+.Logo {
+  font-size: 32px;
+  cursor: pointer;
+  @media only screen and (max-width: 768px) {
+    font-size: 24px;
   }
-  
-  .ListItem {
-    color: white;
-    cursor: pointer;
-    z-index: 1;
+}
+
+.LogoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Hire {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  @media only screen and (max-width: 768px) {
+    justify-content: flex-end;
+    width: 50%;
+    padding: 15px 0;
+    gap: 10px;
   }
-  
-  .Logo {
-    font-size: 32px;
-    color: white;
-    cursor: pointer;
-    @media only screen and (max-width: 768px) {
-      font-size: 24px;
-    }
-  }
-  
-  .LogoContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .Hire {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-  
-    @media only screen and (max-width: 768px) {
-      justify-content: flex-end;
-      width: 50%;
-      padding: 15px 0;
-      gap: 10px;
-    }
-  }
-  
+}
