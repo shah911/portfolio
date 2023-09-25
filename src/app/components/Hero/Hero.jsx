@@ -4,7 +4,7 @@ import CustomButton from "../Custombutton/CustomButton";
 import NavBar from "../Navber/NavBar";
 import Link from "next/link";
 import AutoTyping from "../Autotype/Autotyping";
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Hero({ id }) {
   return (

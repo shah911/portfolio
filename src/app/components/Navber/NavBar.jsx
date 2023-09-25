@@ -5,6 +5,7 @@ import CustomButton from "../Custombutton/CustomButton";
 import { motion } from "framer-motion";
 
 export default function NavBar() {
+  const text = "<SHAHDev />";
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -20,12 +21,19 @@ export default function NavBar() {
     >
       <div className={styles.Container}>
         <div className={styles.LogoContainer}>
-          <motion.span
-            className={styles.Logo}
-            onClick={() => scrollToSection("hero")}
-          >
-            {"<SHAHDev />"}
-          </motion.span>
+          {text.split("").map((char, i) => (
+            <motion.span
+              className={styles.Logo}
+              onClick={() => scrollToSection("hero")}
+              key={i}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ type: "spring", delay: i * 0.05 }}
+            >
+              {char}
+            </motion.span>
+          ))}
         </div>
         <div className={styles.Links}>
           <ul className={styles.List}>

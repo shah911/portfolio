@@ -1,7 +1,6 @@
 import Image from "next/image";
 import CustomButton from "../Custombutton/CustomButton";
 import styles from "./page.module.css";
-import React from "react";
 import { motion } from "framer-motion";
 
 const FrontEnd = [
@@ -54,7 +53,7 @@ export default function Who({ id }) {
   return (
     <div className={styles.Section} id={id}>
       <div className={styles.Container}>
-        <motion.div className={styles.Left}>
+        <div className={styles.Left}>
           <span className={styles.ListItemTitle}>FRONTEND</span>
           <div className={styles.skills}>
             {FrontEnd.map((item) => (
@@ -98,7 +97,7 @@ export default function Who({ id }) {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </div>
         <div className={styles.Right}>
           <h1 className={styles.Title}>My Skillset</h1>
           <p className={styles.Desc}>
