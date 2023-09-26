@@ -29,7 +29,7 @@ export default function NavBar() {
               initial={{ y: 20 }}
               animate={{ y: 0 }}
               exit={{ opacity: 0 }}
-              transition={{ type: "spring", delay: i * 0.05 }}
+              transition={{ type: "spring", delay: i * 0.1 }}
             >
               {char}
             </motion.span>
