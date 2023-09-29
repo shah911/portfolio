@@ -42,6 +42,34 @@ const BackEnd = [
   },
 ];
 
+const animate = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "tween", delay: 0.2, duration: 0.6 },
+  },
+};
+
+const ImageAnimation = {
+  initial: {
+    opacity: 0,
+    y: 50,
+  },
+  animate: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      delay: i * 0.05,
+      stiffness: 300,
+    },
+  }),
+};
+
 export default function Who({ id }) {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -54,12 +82,25 @@ export default function Who({ id }) {
     <div className={styles.Section} id={id}>
       <div className={styles.Container}>
         <div className={styles.Left}>
-          <span className={styles.ListItemTitle}>FRONTEND</span>
+          <motion.span
+            variants={animate}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className={styles.ListItemTitle}
+          >
+            FRONTEND
+          </motion.span>
           <div className={styles.skills}>
-            {FrontEnd.map((item) => (
+            {FrontEnd.map((item, i) => (
               <motion.div
                 className={styles.skills}
                 key={item.url}
+                custom={i}
+                variants={ImageAnimation}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
                 whileHover={{
                   scale: 1.2,
                   transition: { type: "spring", stiffness: 300 },
@@ -76,12 +117,25 @@ export default function Who({ id }) {
             ))}
           </div>
 
-          <span className={styles.ListItemTitle}>BACKEND</span>
+          <motion.span
+            variants={animate}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className={styles.ListItemTitle}
+          >
+            BACKEND
+          </motion.span>
           <div className={styles.skills}>
-            {BackEnd.map((item) => (
+            {BackEnd.map((item, i) => (
               <motion.div
                 className={styles.skills}
                 key={item.url}
+                custom={i}
+                variants={ImageAnimation}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
                 whileHover={{
                   scale: 1.2,
                   transition: { type: "spring", stiffness: 300 },
@@ -99,17 +153,37 @@ export default function Who({ id }) {
           </div>
         </div>
         <div className={styles.Right}>
-          <h1 className={styles.Title}>My Skillset</h1>
-          <p className={styles.Desc}>
+          <motion.h1
+            variants={animate}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className={styles.Title}
+          >
+            My Skillset
+          </motion.h1>
+          <motion.p
+            variants={animate}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className={styles.Desc}
+          >
             As a Full-stack developer, I am proficient in both frontend and
             backend development.
-          </p>
-          <div className={styles.HireMeContainer}>
+          </motion.p>
+          <motion.div
+            variants={animate}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className={styles.HireMeContainer}
+          >
             <CustomButton
               title="See my Work"
               onClick={() => scrollToSection("works")}
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

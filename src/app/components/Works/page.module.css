@@ -53,10 +53,10 @@
 .ListItem {
   width: max-content;
   font-size: 50px;
-  font-weight: bold;
   cursor: pointer;
   color: white;
   position: relative;
+  transition: all ease 0.2s;
 }
 
 .ListItem::after {
@@ -72,6 +72,10 @@
 
 .ListItem:hover::after {
   width: 100%;
+}
+
+.selected {
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 768px) {

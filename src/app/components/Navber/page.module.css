@@ -72,3 +72,12 @@
     gap: 10px;
   }
 }
+
+.svg {
+  width: 200px;
+  overflow: visible;
+  stroke: #fff;
+  stroke-width: 1;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
