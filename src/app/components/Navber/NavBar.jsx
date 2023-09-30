@@ -33,7 +33,7 @@ export default function NavBar() {
     >
       <div className={styles.Container}>
         <div className={styles.LogoContainer}>
-          <span>
+          <span className={styles.Logo} onClick={() => scrollToSection("hero")}>
             <motion.svg
               className={styles.svg}
               width="190.464"
