@@ -9,11 +9,11 @@ import Image from "next/image";
 
 const animationVariants = {
   hidden: { y: 100, opacity: 0 },
-  visible: (delay) => ({
+  visible: {
     y: 0,
     opacity: 1,
-    transition: { type: "tween", delay, duration: 0.6 },
-  }),
+    transition: { type: "tween", delay: 2, duration: 0.6 },
+  },
 };
 
 export default function Hero({ id }) {
@@ -21,43 +21,27 @@ export default function Hero({ id }) {
     <div className={styles.Section} id={id}>
       <NavBar />
       <div className={styles.Container}>
-        <div className={styles.Left}>
-          <motion.h1
-            className={styles.Title}
-            variants={animationVariants}
-            initial="hidden"
-            animate="visible"
-            custom={3}
-          >
-            Hi, I'm Shahzeb
-          </motion.h1>
-          <motion.p
-            className={styles.Desc}
-            variants={animationVariants}
-            initial="hidden"
-            animate="visible"
-            custom={4}
-          >
+        <motion.div
+          className={styles.Left}
+          variants={animationVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <h1 className={styles.Title}>Hi, I'm Shahzeb</h1>
+          <p className={styles.Desc}>
             I'm a <AutoTyping /> Developer.
-          </motion.p>
-          <motion.div
-            className={styles.HireMeContainer}
-            variants={animationVariants}
-            initial="hidden"
-            animate="visible"
-            custom={5}
-          >
+          </p>
+          <div className={styles.HireMeContainer}>
             <Link href="https://www.linkedin.com/in/mian-shahzeb-3b8617245/">
               <CustomButton title="Learn More" />
             </Link>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
         <motion.div
           className={styles.Right}
           variants={animationVariants}
           initial="hidden"
           animate="visible"
-          custom={6}
         >
           <Image
             className={styles.Img}
