@@ -7,40 +7,68 @@ import AutoTyping from "../Autotype/Autotyping";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+const animationVariants = {
+  hidden: { y: 100, opacity: 0 },
+  visible: (delay) => ({
+    y: 0,
+    opacity: 1,
+    transition: { type: "tween", delay, duration: 0.6 },
+  }),
+};
+
 export default function Hero({ id }) {
   return (
     <div className={styles.Section} id={id}>
       <NavBar />
-      <motion.div
-        className={styles.Container}
-        initial={{ opacity: 0 }}
-        animate={{
-          opacity: 1,
-          transition: { ease: "easeInOut", delay: 1, duration: 1 },
-        }}
-      >
+      <div className={styles.Container}>
         <div className={styles.Left}>
-          <h1 className={styles.Title}>Hi, I'm Shahzeb</h1>
-          <p className={styles.Desc}>
+          <motion.h1
+            className={styles.Title}
+            variants={animationVariants}
+            initial="hidden"
+            animate="visible"
+            custom={3}
+          >
+            Hi, I'm Shahzeb
+          </motion.h1>
+          <motion.p
+            className={styles.Desc}
+            variants={animationVariants}
+            initial="hidden"
+            animate="visible"
+            custom={4}
+          >
             I'm a <AutoTyping /> Developer.
-          </p>
-          <div className={styles.HireMeContainer}>
+          </motion.p>
+          <motion.div
+            className={styles.HireMeContainer}
+            variants={animationVariants}
+            initial="hidden"
+            animate="visible"
+            custom={5}
+          >
             <Link href="https://www.linkedin.com/in/mian-shahzeb-3b8617245/">
               <CustomButton title="Learn More" />
             </Link>
-          </div>
+          </motion.div>
         </div>
-        <div className={styles.Right}>
+        <motion.div
+          className={styles.Right}
+          variants={animationVariants}
+          initial="hidden"
+          animate="visible"
+          custom={6}
+        >
           <Image
             className={styles.Img}
             src="/pexels-miguel-á-padriñán-1591060-removebg-preview-removebg.png"
             alt=""
             fill
             priority
-            sizes="(max-width: 768px) 100%"
+            sizes="50vw"
           />
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 }
